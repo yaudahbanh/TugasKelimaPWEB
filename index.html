@@ -7,23 +7,23 @@
 </head>
 <body>
 
-    <div class="app">
+    <div id="app">
         <h2>Simple Calculator</h2>
         <input type="number" v-model="var1">
         <input type="number" v-model="var2">
 
-        <button @click="tambah">+</button>
-        <button @click="kurang">-</button>
-        <button @click="kali">*</button>
-        <button @click="bagi">/</button>
+        <button v-on:click="tambah">+</button>
+        <button v-on:click="kurang">-</button>
+        <button v-on:click="kali">*</button>
+        <button v-on:click="bagi">/</button>
 
-        <h3> {{ result }}</h3>
+        <h3>{{ result }}</h3>
     </div>
     
 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        const {createApp} = Vue
-        createApp({
+        const app = Vue.createApp({
             data() {
                 return {
                     var1: 0,
@@ -46,8 +46,8 @@
                 }
             }
         });
-    </script>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        app.mount('#app');
+    </script>
 </body>
 </html>
