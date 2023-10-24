@@ -7,9 +7,20 @@
 </head>
 <body>
 
-    <div class="app">
-
-    </div>
+    <template>
+        <section>
+            <input placeholder="var1" type="number">
+            <select>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input placeholder="var2" type="number">
+            <h2> {{ result }}</h2>
+        </section>
+    </template>
+    
 
     <script>
         const {createApp} = Vue
