@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple Calculator</title>
 </head>
 <body>
 
     <template>
         <section>
-            <input placeholder="var1" type="number">
+            <input placeholder="var1" type="number" v.model.number="var1">
             <select>
                 <option value="+">+</option>
                 <option value="-">-</option>
                 <option value="*">*</option>
                 <option value="/">/</option>
             </select>
-            <input placeholder="var2" type="number">
+            <input placeholder="var2" type="number" v.model.number="var2">
             <h2> {{ result }}</h2>
         </section>
     </template>
