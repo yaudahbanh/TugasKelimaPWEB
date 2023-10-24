@@ -11,6 +11,13 @@
         <h2>Simple Calculator</h2>
         <input type="number" v-model="var1">
         <input type="number" v-model="var2">
+
+        <button @click="tambah">+</button>
+        <button @click="kurang">-</button>
+        <button @click="kali">*</button>
+        <button @click="bagi">/</button>
+
+        <h3> {{ result }}</h3>
     </div>
     
 
@@ -21,10 +28,24 @@
                 return {
                     var1: 0,
                     var2: 0,
-                    operand:""
+                    result: 0
+                }
+            },
+            methods: {
+                tambah() {
+                    this.result = this.var1 + this.var2;
+                },
+                kurang() {
+                    this.result = this.var1 - this.var2;
+                },
+                kali() {
+                    this.result = this.var1 * this.var2;
+                },
+                bagi() {
+                    this.result = this.var1 / this.var2;
                 }
             }
-        })
+        });
     </script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
