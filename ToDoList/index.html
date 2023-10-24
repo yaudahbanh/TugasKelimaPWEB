@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+        .rantang {
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
 
@@ -12,7 +18,7 @@
         <div v-if="">
             <p>Top Singko Orang TC Jago 22</p>
             <ul>
-                <li v-for="bima in list">
+                <li v-for="bima in list" :class="{ rantang: bima.isfav }" v-on:click="togglefav(bima)">
                     <p>{{ bima.nama }} - {{ bima.ipk }}</p>
                 </li>
             </ul>
