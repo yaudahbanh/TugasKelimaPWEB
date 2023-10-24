@@ -11,8 +11,8 @@
     <div id="app">
         <div v-if="show">
             <ul>
-                <li>
-                    
+                <li v-for="bima in list">
+                    <p>{{ bima.nama }} - {{ bima.ipk }}</p>
                 </li>
             </ul>
         </div>
