@@ -11,6 +11,7 @@
         <h2>Simple Calculator</h2>
         <input type="number" v-model="var1">
         <input type="number" v-model="var2">
+        <br>
 
         <button v-on:click="tambah">+</button>
         <button v-on:click="kurang">-</button>
@@ -32,17 +33,26 @@
                 }
             },
             methods: {
+
                 tambah() {
-                    this.result = this.var1 + this.var2;
+                    const no1 = parseFloat(this.var1);
+                    const no2 = parseFloat(this.var2);
+                    this.result = no1 + no2;
                 },
                 kurang() {
-                    this.result = this.var1 - this.var2;
+                    const no1 = parseFloat(this.var1);
+                    const no2 = parseFloat(this.var2);
+                    this.result = no1 - no2;
                 },
                 kali() {
-                    this.result = this.var1 * this.var2;
+                    const no1 = parseFloat(this.var1);
+                    const no2 = parseFloat(this.var2);
+                    this.result = no1 * no2;
                 },
                 bagi() {
-                    this.result = this.var1 / this.var2;
+                    const no1 = parseFloat(this.var1);
+                    const no2 = parseFloat(this.var2);
+                    this.result = no1 / no2;
                 }
             }
         });
